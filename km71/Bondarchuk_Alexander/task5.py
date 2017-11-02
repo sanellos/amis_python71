@@ -1,15 +1,21 @@
 # ---------
 """
-Умова: Напишіть програму, яка зчитує ціле число і друкує його попереднє і наступне значення за форматом:
+Умова: Дано три цілих числа. Визначте, скільки з них дорівнюють один одному. Програма повинна виводити одне з чисел:
+3 (якщо всі числа однакові), 2 (якщо два з них дорівнюють один одному, а третє відрізняється) або 0 (якщо всі числа різні).
 
-The next number for the number 179 is 180.
-The previous number for the number 179 is 178.
+Вхідні дані: 3 цілих числа.  Кожне число користувач вводить в окремому рядку.
 
-Вхідні дані: ціле число
-
-Вихідні дані: два рядки за наведеним у завдання форматом.
+Вихідні дані: вивести ціле число
 """
 
-number = int(input())
-print("The next number for the number ", number, " is ", number + 1, ".", sep="")
-print("The previous number for the number ", number, " is ", number - 1, ".", sep="")
+# number1,number2,nember3 - цілі числа
+number1 = int(input())
+number2 = int(input())
+number3 = int(input())
+# визначеня кількості однакових чисел
+if (number1 == number2) and (number2 == number3):
+    print(3)
+elif (number1 == number2) or (number2 == number3) or (number1 == number3):
+    print(2)
+else:
+    print(0)
